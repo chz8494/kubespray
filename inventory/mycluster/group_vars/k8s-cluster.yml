@@ -112,7 +112,7 @@ kube_apiserver_insecure_port: 8080 # (http)
 
 # Kube-proxy proxyMode configuration.
 # Can be ipvs, iptables
-kube_proxy_mode: ipvs
+kube_proxy_mode: iptables
 
 ## Encrypting Secret Data at Rest (experimental)
 kube_encrypt_secret_data: false
@@ -156,7 +156,7 @@ docker_bin_dir: "/usr/bin"
 docker_mount_flags:
 
 # Settings for containerized control plane (etcd/kubelet/secrets)
-etcd_deployment_type: docker
+etcd_deployment_type: host
 kubelet_deployment_type: host
 vault_deployment_type: docker
 helm_deployment_type: host
@@ -175,7 +175,7 @@ efk_enabled: false
 helm_enabled: true
 
 # Istio deployment
-istio_enabled: true
+istio_enabled: false
 
 # Registry deployment
 registry_enabled: false
